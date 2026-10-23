@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sther ❤️</title>
+    <title>Esther ❤️</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,6 @@
             position: relative;
         }
 
-        /* Corações flutuando no fundo */
         .heart {
             position: absolute;
             font-size: 24px;
@@ -121,7 +120,6 @@
             user-select: none;
         }
 
-        /* Tela de resposta positiva */
         .response {
             display: none;
             animation: fadeIn 0.6s ease;
@@ -160,13 +158,12 @@
     </style>
 </head>
 <body>
-    <!-- Corações no fundo -->
     <div id="hearts-container"></div>
 
     <div class="container">
         <div class="question-area" id="questionArea">
             <div class="emoji-big">💖</div>
-            <h1>Sther, você quer sair comigo próxima semana pra tomar um café muito bom no seu trabalho?</h1>
+            <h1>Esther, você quer sair comigo próxima semana pra tomar um café muito bom no seu trabalho?</h1>
             
             <div class="buttons">
                 <button class="btn btn-yes" onclick="yesClicked()">Sim ❤️</button>
@@ -176,14 +173,13 @@
 
         <div class="response" id="responseArea">
             <div class="emoji-big">🥰</div>
-            <h2>Boa escolha!</h2>
-            <p>Prometo um Matcha e uma boa conversa ☕💚</p>
+            <h2>Boa escolha, Esther!</h2>
+            <p>Prometo um Matcha e uma boa conversa ☕💚<br><br><small style="color:#e63946;">(mesmo que você fique brava porque escrevi Esther 😏)</small></p>
             <div class="hearts-burst">💕 💖 💗 💓 💞</div>
         </div>
     </div>
 
     <script>
-        // Criar corações flutuantes
         function createHearts() {
             const container = document.getElementById('hearts-container');
             for (let i = 0; i < 25; i++) {
@@ -200,14 +196,12 @@
 
         createHearts();
 
-        // Botão "Não" foge do mouse / toque
         const noBtn = document.getElementById('noBtn');
 
         function moveNoButton() {
             const container = document.querySelector('.container');
             const containerRect = container.getBoundingClientRect();
             
-            // Área segura dentro do container
             const maxX = containerRect.width - noBtn.offsetWidth - 20;
             const maxY = containerRect.height - noBtn.offsetHeight - 20;
             
@@ -219,16 +213,13 @@
             noBtn.style.position = 'absolute';
         }
 
-        // Desktop: mouseover
         noBtn.addEventListener('mouseover', moveNoButton);
 
-        // Mobile: touchstart
         noBtn.addEventListener('touchstart', function(e) {
             e.preventDefault();
             moveNoButton();
         });
 
-        // Também foge se clicar (por precaução)
         noBtn.addEventListener('click', function(e) {
             e.preventDefault();
             moveNoButton();
@@ -238,7 +229,6 @@
             document.getElementById('questionArea').classList.add('hide');
             document.getElementById('responseArea').classList.add('show');
             
-            // Explosão de corações extras
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
