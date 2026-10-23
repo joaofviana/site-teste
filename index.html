@@ -18,8 +18,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
+            padding: 20px 0;
         }
 
         .heart {
@@ -50,12 +51,12 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(12px);
             border-radius: 30px;
-            padding: 50px 40px;
+            padding: 40px 30px 25px;
             max-width: 520px;
-            width: 90%;
+            width: 92%;
             box-shadow: 0 20px 50px rgba(255, 77, 109, 0.25);
             text-align: center;
             position: relative;
@@ -64,8 +65,8 @@
         }
 
         .emoji-big {
-            font-size: 4.5rem;
-            margin-bottom: 15px;
+            font-size: 4rem;
+            margin-bottom: 12px;
             animation: pulse 1.5s ease-in-out infinite;
         }
 
@@ -76,9 +77,9 @@
 
         h1 {
             color: #e63946;
-            font-size: 1.7rem;
+            font-size: 1.55rem;
             line-height: 1.4;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 600;
         }
 
@@ -88,12 +89,13 @@
             gap: 30px;
             flex-wrap: wrap;
             position: relative;
-            min-height: 80px;
+            min-height: 70px;
+            margin-bottom: 25px;
         }
 
         .btn {
-            padding: 16px 40px;
-            font-size: 1.3rem;
+            padding: 15px 38px;
+            font-size: 1.25rem;
             font-weight: 600;
             border: none;
             border-radius: 50px;
@@ -136,13 +138,13 @@
 
         .response h2 {
             color: #e63946;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.7rem;
+            margin-bottom: 15px;
         }
 
         .response p {
             color: #555;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             line-height: 1.6;
         }
 
@@ -151,9 +153,23 @@
         }
 
         .hearts-burst {
-            font-size: 2.5rem;
-            margin-top: 25px;
+            font-size: 2.3rem;
+            margin-top: 20px;
             letter-spacing: 8px;
+        }
+
+        .music-box {
+            margin-top: 20px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .music-label {
+            font-size: 0.85rem;
+            color: #e63946;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -169,6 +185,11 @@
                 <button class="btn btn-yes" onclick="yesClicked()">Sim ❤️</button>
                 <button class="btn btn-no" id="noBtn">Não</button>
             </div>
+
+            <div class="music-label">🎵 Nossa trilha sonora</div>
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
 
         <div class="response" id="responseArea">
@@ -176,6 +197,11 @@
             <h2>Boa escolha, Esther!</h2>
             <p>Prometo um Matcha e uma boa conversa ☕💚<br><br><small style="color:#e63946;">(mesmo que você fique brava porque escrevi Esther 😏)</small></p>
             <div class="hearts-burst">💕 💖 💗 💓 💞</div>
+
+            <div class="music-label" style="margin-top: 25px;">🎵 Continuando a vibe...</div>
+            <div class="music-box">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
     </div>
 
